@@ -1,0 +1,37 @@
+
+
+<header class="header">
+    <div class="primary-header">
+      <div class="container">
+        <div class="primary-header-inner">
+          <div class="header-logo">
+            <a href="#"><img src="../static/img/logo-dark.png" alt="4Metal Logo" /></a>
+          </div>
+          <div class="header-menu-wrap">
+           {% if navigation.items %}
+
+                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
+                    {% for item in navigation.items %}
+                        <li class="nav__item mr-3">
+                            <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            {% endif %}
+          </div>
+          <div class="header-right">
+            <a class="menu-btn" href="#">Request a Quote</a>
+  
+            <div class="mobile-menu-icon">
+              <div class="burger-menu">
+                <div class="line-menu line-half first-line"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu line-half last-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
